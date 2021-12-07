@@ -1,0 +1,316 @@
+/*FORM STYLES */
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+.container {
+	
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.formheader {
+	border-bottom: 1px solid #f0f0f0;
+	
+	padding: 20px 40px;
+}
+
+
+
+.form {
+    padding: 30px 40px;	
+    align-items:center;
+    justify-content: center;
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+  
+}
+
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+  color:brown;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: green;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+  cursor:pointer;
+}
+
+/* SITE STYLES */
+
+.navigation{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:goldenrod;
+}
+
+
+body {
+    
+    background-size:99%;
+    background-color: papayawhip;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border:none;
+    margin:4px 2px;
+    padding: 16px 32px;
+ 
+ }
+ 
+ 
+  
+ h1 {
+     color: red;
+     text-align: center;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ h2,h3 {
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     letter-spacing:-0.05em;
+     color:chocolate;
+ }
+ h4{
+   font-style:italic;
+ }
+ 
+ h5{
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     color:grey;
+ }
+ 
+ p{
+     color:grey;
+     font-weight:lighter;
+     font-style:normal;
+     text-decoration:none;
+     font-size:medium;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ 
+   
+ .direct{
+    float:left;
+ 
+}
+ 
+   html{
+     scroll-behavior: smooth;
+   }
+ 
+   .navigation{
+       margin:0;
+       padding:0;
+       overflow:hidden;
+       background-color:goldenrod;
+   }
+   
+   
+   nav a {
+       display:block;
+       color:red;
+       text-align:center;
+       padding:14px 16px;
+       text-decoration: none;
+   }
+ 
+   nav a:hover{
+       background-color:aqua;
+   }
+   
+
+   
+   
+   #ImgCenter{
+     display:block;
+     margin-left:auto;
+     margin-right:auto;
+     width:25%;
+   }
+  
+   .row {  
+     display: flex;
+     flex-wrap: wrap;
+     
+   }
+   
+   
+   .menu {
+     flex: 100%;
+     background-color: #f1f1f1;
+     padding: 20px;
+   }
+   
+   .a{
+     font-family:'Arial'
+   }
+   
+   .content {
+     flex: 100%;
+     
+     padding: 20px;
+   }
+   
+  
+   .right{
+        flex:100%;
+        
+        padding:20px;
+
+    }
+  
+   .footer {
+     padding: 20px;
+     text-align: center;
+     background: #ddd;
+   }
+ 
+   
+   /* GRID */
+   .container{
+     
+     display:grid;
+     grid-gap:3px;
+     grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+     grid-template-rows:repeat(2,100px);
+     grid-template-areas:  "h h h h h h h h h h h r"
+                           "n n n n n n n n n n n r"
+                           "m m c c c c c c c c c r"
+                           "f f f f f f f f f f f f"
+ }
+ div{
+   background-color: burlywood;
+   
+ }
+ .header{
+     grid-area:h;
+     background-color:tan;
+ }
+ .footer{
+     grid-area:f;
+     
+ }
+ .content{
+     grid-area:c;
+     
+ 
+ }
+ .menu{
+     grid-area: m;
+     background-color:rgb(193, 255, 47);
+     
+ }
+ .right{
+     grid-area:r;
+     background-color:rgb(100, 228, 237);
+     
+ }
+.navigation{
+    grid-area:n;
+    background-color:goldenrod;
+}
+   
+   @font-face{
+     font-family: Christmas Journey;
+     src: url("Christmas\ Journey.ttf");
+   }
+
+   @media screen and (min-width:600px){
+        .content{
+            flex:1;
+        }
+        .menu{
+            flex:0 1 300px;
+        }
+        
+    }
+
+    @media screen and (min-width:900px){
+       .row{
+           margin:auto;
+           max-width:100%;
+       }
+
+        .menu{
+            flex:30%;
+            max-width:30%;
+            padding: 20px;
+
+        }
+        .content{
+            flex:60%;
+            max-width:60%;
+            padding:20px;
+        }
+        .right{
+            flex:10%;
+            max-width:10%;
+            padding:20px;
+        }
+    }
+
+    .ResponsiveImg{
+      width:100%;
+      height:auto;
+      max-width:400px;
+      max-height:400px;
+    }
+        
+       
+    
+    
